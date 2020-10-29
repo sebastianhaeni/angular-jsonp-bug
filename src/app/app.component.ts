@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'angular-jsonp-test';
+  title = 'initial title';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
         'callback'
       )
       .subscribe(() => {
-        this.title = 'map enabled';
+        this.title = 'successful jsonp call';
       });
   }
 }
